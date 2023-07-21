@@ -43,7 +43,7 @@
 
 # What is your status page called?
 # Shows up in the browser bar and meta tags
-title: Eggsample Status
+title: Tacocrypto Status Page
 
 # Should posts, which have a publish date
 # from the future, be built? Useful for
@@ -97,7 +97,7 @@ defaultContentLanguage: en
 #
 # Broken example:
 # baseUrl: /
-baseURL: https://example.com
+baseURL: https://tacocrypto-cstate.pages.dev
 
 # For features like Last modified, you
 # need to use a Git repository. If you
@@ -143,10 +143,15 @@ params:
   # For help, see the wiki:
   # https://github.com/cstate/cstate/wiki/Customization
   categories:
-    - name: North Coast
-      description: The main servers are located here.
+    - name: WAX Mainnet
+      description: WAX Mainnet services.
       closed: true
-    - name: Empty Category
+    - name: WAX Testnet
+      description: WAX Testnet services.
+      closed: true
+    - name: Web
+      description: WWW services.
+      closed: true
     - name: Uncategorized
       untitled: true
 
@@ -158,20 +163,34 @@ params:
   # For help, see the wiki:
   # https://github.com/cstate/cstate/wiki/Customization
   systems:
-    - name: Gateway
-      category: North Coast
-    - name: Backup Gateway
-      category: North Coast
+    - name: RPC API
+      description: Blockchain API.
+      category: WAX Mainnet
+      link: https://api-wax.tacocrypto.io
+    - name: P2P
+      description: Peer nodes.
+      category: WAX Mainnet
+      link: peer1.wax.tacocrypto.io
+    - name: Atomic
+      description: Atomic Assets.
+      category: WAX Mainnet
+      link: https://atomic-wax.tacocrypto.io
+    - name: LightAPI
+      description: Balance service.
+      link: https://lightapi-wax.tacocrypto.io
+      category: WAX Mainnet
+    - name: Hyperion
+      description: Partial state history.
+      link: https://api-wax.tacocrypto.io/hyperion
+      category: WAX Mainnet
     - name: Website
-      description: The web frontend for the application.
-      category: Uncategorized
-      link: https://example.com/
-    - name: API
-      description: The guts of the application.
-      category: Uncategorized
-    - name: Media Proxy
-      description: This is the service responsible for serving images, audio, and video. It is reliant on our CDN.
-      category: Uncategorized
+      description: Website.
+      link: https://tacocrypto.io
+      category: Web
+    - name: IPFS
+      description: IPFS.
+      link: https://ipfs.tacocrypto.io/ipfs
+      category: Web
 
   # What date format to use?
   #
